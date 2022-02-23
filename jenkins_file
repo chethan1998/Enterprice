@@ -1,0 +1,22 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+        stage('hi') {
+            steps {
+                echo 'hii'
+            }
+        }
+         stage('SVM') {
+            steps {
+                git branch: 'dev', url: 'https://github.com/chethan1998/Enterprice.git'
+            }
+        }
+        
+    }
+}
